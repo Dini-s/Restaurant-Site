@@ -278,3 +278,14 @@ nav{
     }
     
 }
+.main-galary{
+    display: flex;
+    justify-content: safe;
+    align-items: safe;
+
+    img{
+        width:fit-content;
+        height: 255px;
+        
+    }
+}
