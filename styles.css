@@ -237,7 +237,7 @@ nav{
              }
               .topic-line {
                 background-color: #d43031;
-                height: 1px;
+                height: 2px;
                 width: 70%;
                 margin-top: 16px;
     }
@@ -287,5 +287,194 @@ nav{
         width:fit-content;
         height: 255px;
         
+    }
+}
+
+.chef{
+     margin: 20vh;
+
+     .chef-content{
+        display: flex;
+        column-gap: 60px;
+        .chef-content-header{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10vh;
+
+            h2{
+                font-family: "Raleway";
+                font-weight: 400;
+                font-size: 38px;
+                text-transform: uppercase;
+            }
+
+            .topic-line {
+                background-color: #d43031;
+                height: 2px;
+                width: 10%;
+                margin-top: 16px;
+    }
+        }
+        p{
+            font-family: "Open Sans";
+            font-size: 16px;
+            color: #777;
+            right: 10%;
+            
+        }
+
+     }
+}
+
+footer{
+    width: 100%;
+    margin-top: 10vh;
+    background-color: #333;
+
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10vh;
+        justify-content: center;
+      
+
+        .footer-details{
+            display: flex;
+            justify-content: space-around;
+            column-gap: 20vh;
+            margin-top: 10vh;
+            .footer-header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px;
+                
+                h4{
+                    font-family: "Raleway";
+                    padding: 2px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+                 .topic-line {
+                background-color: #d43031;
+                height: 2px;
+                width: 20%;
+                margin-top: 16px;
+                }
+            }
+            p{
+                font-family: "Open Sans";
+                text-align: center;
+                color: #777;
+            }
+            
+        }
+    }
+    .footer-contact{
+        .footer-header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px;
+                
+                h4{
+                    font-family: "Raleway";
+                    padding: 2px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+                 .topic-line {
+                background-color: #d43031;
+                height: 2px;
+                width: 20%;
+                margin-top: 16px;
+                }
+            }
+            .contact-form{
+                width: 100vh;
+                margin: 0 auto;
+               
+
+                .form-control{
+                    display: grid;
+                    grid-template-rows: auto auto;
+                    gap: 20px;
+
+                    .contact-info{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        gap:20px
+                    }
+
+                    .message-area textarea,
+                    .contact-info input{
+                        width: 100%;
+                        padding: 12px;
+                        background-color: #777;
+                        color: #fff;
+                        resize: vertical;
+                        border: none;
+                    }
+
+                    input::placeholder,textarea::placeholder{
+                        color: #fff;
+                        opacity: 0.26;
+                        font-family: "Open Sans";
+                    }
+
+                    .message-area textarea{
+                        min-height: 120px;
+                    }
+                }
+
+                button{
+                    background: #333;
+                    color: #777;
+                    padding: 20px;
+                    margin: 5vh;
+                    border: 1px solid #fff;
+                    text-align: center;
+                    margin-left: 300px;
+                    margin-bottom: 8vh;
+
+                    &:hover{
+                        background-color: #d43031;
+                        color: #fff;
+                    }
+
+                }
+            }
+    }
+    .copywrite-area{
+        background-color: #262626;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       padding: 8vh;
+
+       .icons{
+        display: flex;
+        gap:8vh;
+
+        a{
+            font-size: 4vh;
+            color: #777;
+        }
+       }
+
+       .copyWrite-message p{
+        font-size: 16px;
+        font-family: "Open Sans";
+        color: #777;
+
+        span{
+            color: #fff;
+        }
+       }
     }
 }
