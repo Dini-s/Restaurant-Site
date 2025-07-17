@@ -40,6 +40,59 @@ nav{
         }
         
     }
+    h1{
+        display: none
+    }
+    svg{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        h1{
+            font-size: 24px;
+            color: #fff;
+            display: block;
+            font-family: "Rochester", cursive;
+        }
+        ul{
+            display: none;
+            position: absolute;
+            text-align: center;
+            top: 50px;
+            right: 0;
+            z-index: 1000;
+            background-color: #262626;
+            padding: 10px;
+            width: 20%;
+            row-gap: 20px;
+            justify-content: space-around;
+            
+        }
+
+        ul.show{
+            display: flex;
+            flex-direction: column;
+        }
+        /* Make sure svg selector is not being overridden by a more specific selector elsewhere.
+           Also, use !important to ensure display is set. */
+        & > svg {
+            display: block !important;
+            width: 24px;
+            height: 24px;
+            color: #fff;
+            cursor: pointer;
+           
+        }
+
+        
+    }
+   
 }
 .hero{
     display: flex;
@@ -72,7 +125,15 @@ nav{
     }
     
 }
-
+@media only screen and (max-width: 1024px) {
+    .hero{
+        .hero-content{
+            h1{
+                font-size: 5em;
+            }
+        }
+    }
+}
 .special{
     padding:120px 0;
 

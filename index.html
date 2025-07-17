@@ -9,13 +9,20 @@
 </head>
 <body>
     <nav>
-        <ul>
+        <h1>Feastory</h1>
+        <ul id="nav-links">
            <li><a href="./specials.html">SPECIALS</a></li>
            <li><a href="./about.html">ABOUT</a></li>
            <li><a href="./menu.html">MENU</a></li>
            <li><a href="./chef.html">CHEF</a></li>
            <li><a href="./contact.html">CONTACT</a></li>
         </ul>
+        
+
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+          </svg>
+          
     </nav>
     <main>
         <section class="hero">
@@ -384,4 +391,11 @@ Join us and discover the flavors crafted by a true artist in the kitchen.</p>
 
     </footer>
 </body>
+<script>
+    const hamburger=document.getElementById("hamburger-icon");
+    const navLinks=document.getElementById("nav-links");
+    hamburger.addEventListener("click",()=>{
+        navLinks.classList.toggle("show");
+    })
+</script>
 </html>
