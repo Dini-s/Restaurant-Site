@@ -11,11 +11,11 @@
     <nav>
         <h1>Feastory</h1>
         <ul id="nav-links">
-           <li><a href="./specials.html">SPECIALS</a></li>
-           <li><a href="./about.html">ABOUT</a></li>
-           <li><a href="./menu.html">MENU</a></li>
-           <li><a href="./chef.html">CHEF</a></li>
-           <li><a href="./contact.html">CONTACT</a></li>
+           <li><a href="#special">SPECIALS</a></li>
+           <li><a href="#story">ABOUT</a></li>
+           <li><a href="#menu">MENU</a></li>
+           <li><a href="#chef">CHEF</a></li>
+           <li><a href="#contact">CONTACT</a></li>
         </ul>
         
 
@@ -33,7 +33,7 @@
 
         </section>
 
-        <section class="special">
+        <section class="special" id="special">
             <div class="special-content">
                 <h2>our specials</h2>
                 <div class="topic-line"></div>
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </section>
-        <section class="story">
+        <section class="story" id="story">
             <div class="story-content">
                 <div class="img-sector">
                     <img src="Public/assests/story.png"/>
@@ -84,7 +84,7 @@
             </div>
         </section>
 
-        <section class="menu">
+        <section class="menu" id="menu">
             <div class="main-header">
                <h2>menu</h2>
                <div class="topic-line"></div>
@@ -292,7 +292,7 @@
                 </div>
             </div>
         </section>
-        <section class="chef">
+        <section class="chef" id="chef">
             <div class="chef-content">
                 <div class="chef-content-text">
                     <div class="chef-content-header">
@@ -314,7 +314,7 @@ Join us and discover the flavors crafted by a true artist in the kitchen.</p>
         </section>
     </main>
     <footer >
-        <div class="footer-content">
+        <div class="footer-content" id="contact">
             <div class="footer-details">
                 <div class="footer-sub-details">
                     <div class="footer-header">
@@ -397,5 +397,28 @@ Join us and discover the flavors crafted by a true artist in the kitchen.</p>
     hamburger.addEventListener("click",()=>{
         navLinks.classList.toggle("show");
     })
+
+    //Scrollspy function for show nav bar active in each section
+    const sections=document.querySelectorAll("section[id],.footer-content[id]");
+    const navItems=document.querySelectorAll("nav ul li a")
+
+    window.addEventListener("scroll",()=>{
+        let currentSection="";
+        sections.forEach(section=>{
+            const sectionTop=section.getBoundingClientRect().top+window.scrollY-100;
+            if(window.scrollY>=sectionTop){
+                currentSection=section.getAttribute("id");
+            }
+        })
+   
+
+    navItems.forEach(item=>{
+        item.classList.remove("active");
+        if(item.getAttribute("href")===`#${currentSection}`){
+            item.classList.add("active");
+        }
+    })
+});
+    
 </script>
 </html>

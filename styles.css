@@ -35,6 +35,11 @@ nav{
                 &:hover{
                 color:#d43031;
             }
+            &.active{
+                color:#d43031 !important;
+                font-weight: bold;
+                border-bottom: 2px solid #d43031 ;
+            }
             }
             
         }
